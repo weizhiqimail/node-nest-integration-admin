@@ -12,7 +12,13 @@ function AdminLayout() {
   return (
     <Shell className={classNames(layoutsStyle.pageLayout, styles.pageLayout)}>
       <Shell.Branding>
-        <span style={{ marginLeft: 10 }}>node-nest-integration-admin</span>
+        <span
+          style={{
+            marginLeft: 10,
+          }}
+        >
+          node-nest-integration-admin
+        </span>
       </Shell.Branding>
 
       <Shell.Action>

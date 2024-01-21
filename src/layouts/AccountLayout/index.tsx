@@ -2,13 +2,13 @@ import { Outlet } from 'umi';
 
 import layoutsStyle from '../layouts.module.less';
 
-function LoginLayout() {
+function AccountLayout() {
   return (
     <div className={layoutsStyle.pageLayout}>
-      LoginLayout
+      AccountLayout
       <Outlet />
     </div>
   );
 }
 
-export default LoginLayout;
+export default AccountLayout;

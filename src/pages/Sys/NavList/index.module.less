@@ -1,0 +1,22 @@
+@import '@/assets/styles/variable.less';
+
+.routeList {
+  width: 300px;
+}
+
+.routeItem {
+  padding: 6px 12px;
+
+  .routeItemName {
+    font-size: 14px;
+    font-weight: 500;
+    color: @theme-color;
+    transition: all 300ms;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      border-bottom: 1px solid @theme-color;
+    }
+  }
+}
