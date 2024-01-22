@@ -23,7 +23,7 @@ export default function HomePage() {
       list: [
         {
           name: 'umi 官网',
-          path: 'https://umijs.org/zh-CN/docs',
+          path: 'https://umijs.org/docs/guides/getting-started',
         },
         {
           name: 'fusion 官网',

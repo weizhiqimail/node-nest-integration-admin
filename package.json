@@ -3,8 +3,8 @@
   "private": true,
   "author": "dorisentomari <dorisentomari@gmail.com>",
   "scripts": {
-    "dev": "umi dev",
-    "build": "umi build",
+    "dev": "PORT=5900 umi dev",
+    "build": "cross-env NODE_ENV=prod umi build",
     "postinstall": "umi setup",
     "setup": "umi setup",
     "start": "npm run dev",
@@ -12,15 +12,19 @@
   },
   "dependencies": {
     "@alifd/next": "^1.27.2",
+    "axios": "^1.6.5",
     "classnames": "^2.5.1",
     "moment": "^2.30.1",
     "umi": "^4.1.1"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/moment": "^2.13.0",
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
+    "cross-env": "^7.0.3",
     "prettier": "3.2.4",
+    "style-resources-loader": "^1.5.0",
     "typescript": "^5.0.3"
   }
 }
