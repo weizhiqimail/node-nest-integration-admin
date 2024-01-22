@@ -1,0 +1,34 @@
+@import '@/assets/styles/variable.less';
+
+.pageWrapper {
+  padding: 20px;
+}
+
+.cardList {
+  display: flex;
+  justify-content: space-between;
+
+  .cardItem {
+    flex: 1;
+    margin: 0 12px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.moduleEntryList {
+  .moduleEntryItem {
+    cursor: pointer;
+    transition: all 300ms;
+
+    &:hover {
+      color: @theme-color;
+    }
+  }
+}
