@@ -3,8 +3,8 @@ import request from '@/request';
 /**
  * 获取权限列表
  */
-export function queryPermissionList() {
-  return request.post('/api/auth/permission/list');
+export function queryPermissionList(data = {}) {
+  return request.post('/api/auth/permission/list', data);
 }
 
 /**
