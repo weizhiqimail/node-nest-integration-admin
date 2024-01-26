@@ -3,7 +3,7 @@
   "private": true,
   "author": "dorisentomari <dorisentomari@gmail.com>",
   "scripts": {
-    "dev": "PORT=5900 umi dev",
+    "dev": "cross-env PORT=5900 umi dev",
     "build": "cross-env NODE_ENV=prod umi build",
     "postinstall": "umi setup",
     "setup": "umi setup",
