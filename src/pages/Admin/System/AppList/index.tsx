@@ -1,32 +1,31 @@
 import { Field } from '@alifd/next';
-
 import CRUD, { CRUDProps } from '@/components/CRUD';
 import { FormItemsType } from '@/components/FormItems/types';
 
-function PermissionPage() {
+function AppPage() {
   const searchFormField = Field.useField({});
 
   const crudProps: CRUDProps = {
     headerProps: {
-      title: '权限列表',
+      title: 'APP列表',
     },
     formProps: {
       itemList: [
         {
           type: FormItemsType.input,
-          label: '权限名称',
+          label: 'app名称',
           name: 'name',
           formItemProps: { style: { marginRight: 12 } },
         },
         {
           type: FormItemsType.input,
-          label: '权限标识',
+          label: 'app code',
           name: 'code',
           formItemProps: { style: { marginRight: 12 } },
         },
         {
           type: FormItemsType.input,
-          label: '所属应用',
+          label: 'app Id',
           name: 'appId',
           formItemProps: { style: { marginRight: 12 } },
         },
@@ -62,4 +61,4 @@ function PermissionPage() {
   );
 }
 
-export default PermissionPage;
+export default AppPage;

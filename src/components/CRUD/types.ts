@@ -31,19 +31,6 @@ export interface CRUDTableProps<RowItemType = any, UpdateItemType = any> {
   tableProps?: TableProps;
   queryHandler?: (data: any) => void;
 
-  showUpdateBtn?: boolean;
-  showDelBtn?: boolean;
-
-  updateHandler?: (value: any, index: number, record: any) => void;
-  delHandler?: (value: any, index: number, record: any) => void;
-
   showPagination?: boolean;
   paginationProps?: PaginationProps;
-}
-
-export interface CRUDTableItemOption {
-  field: string;
-  canQuery?: boolean;
-  canCreate?: boolean;
-  canUpdate?: boolean;
 }

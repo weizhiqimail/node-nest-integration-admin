@@ -22,6 +22,12 @@ const adminRoutes: Array<RouteItem> = [
     component: '@/pages/Admin/PermRole/PermissionGroup',
     wrappers: ['@/layouts/AdminLayout'],
   },
+  {
+    path: '/admin/system/appList',
+    name: 'App应用管理',
+    component: '@/pages/Admin/System/AppList',
+    wrappers: ['@/layouts/AdminLayout'],
+  },
 ];
 
 export default adminRoutes;

@@ -19,7 +19,7 @@ export function removeLocalStorageByPrefix(prefix: string) {
  * @param key
  * @param defaultValue
  */
-export function safeGetLocalStorage(key: string, defaultValue: any) {
+export function safeGetLocalStorage(key: string, defaultValue?: any) {
   try {
     const value = localStorage.getItem(key);
     if (value) {
