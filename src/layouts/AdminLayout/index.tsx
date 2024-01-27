@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Outlet, history, useLocation } from 'umi';
 import { Nav, Shell } from '@alifd/next';
 import classNames from 'classnames';
@@ -6,12 +6,9 @@ import { useSetState } from 'ahooks';
 
 import layoutsStyle from '../layouts.module.less';
 import styles from './index.module.less';
-import {
-  AdminMenuItem,
-  adminMenuMap,
-} from '@/layouts/AdminLayout/adminMenuList';
+import { adminMenuMap } from '@/layouts/AdminLayout/adminMenuList';
 import { safeGetLocalStorage, safeSetLocalStorage } from '@/utils/browser';
-import { NavSelectInfo } from '@/layouts/AdminLayout/types';
+import { AdminMenuItem, NavSelectInfo } from '@/layouts/AdminLayout/types';
 import { AdminMenuCacheMap } from '@/layouts/AdminLayout/config';
 
 const adminMenuList = adminMenuMap.menuList;
@@ -22,13 +19,21 @@ function AdminLayout() {
 
   const [navCollapse, setNavCollapse] = useState(false);
 
-  const startNavSelectInfo = initNavSelectInfo();
   const [navSelectInfo, setNavSelectInfo] =
     useSetState<NavSelectInfo>(initNavSelectInfo());
 
   return (
     <Shell className={classNames(layoutsStyle.pageLayout, styles.pageLayout)}>
-      <Shell.Branding>node-nest-integration-admin</Shell.Branding>
+      <Shell.Branding>
+        <span
+          style={{ cursor: 'pointer' }}
+          onClick={() => {
+            history.push('/');
+          }}
+        >
+          home
+        </span>
+      </Shell.Branding>
 
       <Shell.Action>username</Shell.Action>
 
@@ -103,7 +108,11 @@ function AdminLayout() {
   function renderNavItem(menuItem: AdminMenuItem) {
     if (Array.isArray(menuItem.children) && menuItem.children.length > 0) {
       return (
-        <Nav.SubNav key={menuItem.title} label={menuItem.title}>
+        <Nav.SubNav
+          icon={menuItem.icon || null}
+          key={menuItem.title}
+          label={menuItem.title}
+        >
           {menuItem.children.map((childMenuItem) => {
             return renderNavItem(childMenuItem);
           })}
@@ -112,6 +121,7 @@ function AdminLayout() {
     }
     return (
       <Nav.Item
+        icon={menuItem.icon || null}
         key={menuItem.title}
         onClick={() => {
           naveItemOnClick(menuItem);

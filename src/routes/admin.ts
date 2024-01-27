@@ -17,15 +17,27 @@ const adminRoutes: Array<RouteItem> = [
     wrappers: ['@/layouts/AdminLayout'],
   },
   {
-    path: '/admin/permRole/permissionGroup',
-    name: '权限组管理',
-    component: '@/pages/Admin/PermRole/PermissionGroup',
+    path: '/admin/permRole/role',
+    name: '角色管理',
+    component: '@/pages/Admin/PermRole/Role',
     wrappers: ['@/layouts/AdminLayout'],
   },
   {
     path: '/admin/system/appList',
     name: 'App应用管理',
     component: '@/pages/Admin/System/AppList',
+    wrappers: ['@/layouts/AdminLayout'],
+  },
+  {
+    path: '/admin/user/userList',
+    name: '用户管理',
+    component: '@/pages/Admin/User/UserList',
+    wrappers: ['@/layouts/AdminLayout'],
+  },
+  {
+    path: '/admin/sys/dbList',
+    name: '数据库表',
+    component: '@/pages/Admin/System/DBList',
     wrappers: ['@/layouts/AdminLayout'],
   },
 ];

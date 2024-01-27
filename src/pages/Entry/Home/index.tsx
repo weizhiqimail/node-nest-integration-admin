@@ -33,6 +33,18 @@ export default function HomePage() {
           name: 'nest 中文官网',
           path: 'https://nest.nodejs.cn/',
         },
+        {
+          name: 'swagger 接口文档',
+          path: 'http://localhost:4000/api-docs',
+        },
+        {
+          name: 'iconfont',
+          path: 'https://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=4425329',
+        },
+        {
+          name: 'iconfont 阿里云',
+          path: 'https://www.iconfont.cn/collections/detail?cid=16472',
+        },
       ],
       jumpType: 2,
     },

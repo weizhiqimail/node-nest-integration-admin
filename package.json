@@ -3,16 +3,20 @@
   "private": true,
   "author": "dorisentomari <dorisentomari@gmail.com>",
   "scripts": {
-    "dev": "npm run clean & cross-env PORT=5900 umi dev",
+    "dev": "npm run clean:umi & cross-env PORT=3500 umi dev",
     "build": "cross-env NODE_ENV=prod umi build",
     "postinstall": "umi setup",
     "setup": "umi setup",
     "start": "npm run dev",
     "prettier": "prettier --write \"src/**/*.*\"",
-    "clean": "rimraf ./src/.umi"
+    "clean": "npm run clean:*",
+    "clean:umi": "rimraf ./src/.umi",
+    "clean:node_modules": "npm run clean:umi & rimraf node_modules"
   },
   "dependencies": {
     "@alifd/next": "^1.27.2",
+    "@alifd/theme-1": "0.4.2",
+    "@alifd/theme-24374": "^0.2.1",
     "ahooks": "^3.7.8",
     "axios": "^1.6.5",
     "classnames": "^2.5.1",

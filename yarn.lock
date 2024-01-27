@@ -2,6 +2,14 @@
 # yarn lockfile v1
 
 
+"@alifd/field@~1.5.5":
+  version "1.5.8"
+  resolved "https://registry.npmmirror.com/@alifd/field/-/field-1.5.8.tgz#18a0bd92dec109a4efd40def6f52aecf6550296f"
+  integrity sha512-RBbwEeex2lb9fFjsXU3wJp2FZGPS75svKzOcDb9ZtKHiVU3byD6zuB0/hzJ9Exb0DkOgykFc6gF76QoaYF4+Ug==
+  dependencies:
+    "@alifd/validate" "^1.2.0"
+    prop-types "^15.5.8"
+
 "@alifd/field@~1.7.0":
   version "1.7.0"
   resolved "https://registry.npmmirror.com/@alifd/field/-/field-1.7.0.tgz#ccb1be9b4394b992cb4ea7ada3f9d4b01d0b3479"
@@ -32,12 +40,67 @@
     shallow-element-equals "^1.0.1"
     tslib "^2.6.2"
 
-"@alifd/overlay@^0.3.2":
+"@alifd/next@~1.24.x":
+  version "1.24.18"
+  resolved "https://registry.npmmirror.com/@alifd/next/-/next-1.24.18.tgz#5189f6439e156ccbd99e1bfa51322894ae5f4578"
+  integrity sha512-qfpkZxz/81WxloxAJ9ZR3YRwVh7oR9HM0GbChaSAYAJXaawkZcs7obvgmmePq285Qv5agOzmLpFdJwJ8oRTmIQ==
+  dependencies:
+    "@alifd/field" "~1.5.5"
+    "@alifd/validate" "~1.2.0"
+    babel-runtime "^6.26.0"
+    bignumber.js "^9.0.1"
+    classnames "^2.2.3"
+    dayjs "^1.9.6"
+    hoist-non-react-statics "^3.0.0"
+    lodash.clonedeep "^4.5.0"
+    prop-types "^15.6.0"
+    react-lifecycles-compat "^3.0.4"
+    react-transition-group "^2.2.1"
+    resize-observer-polyfill "^1.5.1"
+    shallow-element-equals "^1.0.1"
+
+"@alifd/next@~1.27.x":
+  version "1.27.4"
+  resolved "https://registry.npmmirror.com/@alifd/next/-/next-1.27.4.tgz#86ef78cbf81bd40d75366ca61ed891367b2185c6"
+  integrity sha512-XtaMTkbNsEvpVd9qJ5uPfIk5CKhb2iS3/BY2x5StLW7MoljmzZY1HXy3gUB6I4T+ttciBRf6z2r67afI3wnXWA==
+  dependencies:
+    "@alifd/field" "~1.7.0"
+    "@alifd/overlay" "^0.3.3"
+    "@alifd/validate" "~1.2.0"
+    "@types/react-transition-group" "^4.4.6"
+    babel-runtime "^6.26.0"
+    big.js "^6.2.0"
+    classnames "^2.2.3"
+    dayjs "^1.9.6"
+    hoist-non-react-statics "^3.0.0"
+    lodash.clonedeep "^4.5.0"
+    prop-types "^15.6.0"
+    react-lifecycles-compat "^3.0.4"
+    react-transition-group "^2.2.1"
+    resize-observer-polyfill "^1.5.1"
+    shallow-element-equals "^1.0.1"
+    tslib "^2.6.2"
+
+"@alifd/overlay@^0.3.2", "@alifd/overlay@^0.3.3":
   version "0.3.3"
   resolved "https://registry.npmmirror.com/@alifd/overlay/-/overlay-0.3.3.tgz#5244913388b962b95ec696575a4c7c4022629336"
   integrity sha512-UnTCzyzVFPCmvvzj+SPqaRiWJEWQG5prJ8uCHWLN8R7ReOtPxSvoJ8GjB3g0kshoJfRBitFsEGuiI0m9n5kVaA==
   dependencies:
     resize-observer-polyfill "^1.5.1"
+
+"@alifd/theme-1@0.4.2":
+  version "0.4.2"
+  resolved "https://registry.npmmirror.com/@alifd/theme-1/-/theme-1-0.4.2.tgz#e73880c384382797e97d25a93e2eb1326f2f52c5"
+  integrity sha512-AzT4B7a7gg4oowrlDx9CRanQ8mx/oLmXrIwn8k+ZiteGTDjUiIrQSF3qhHSpSYRSG3lbyIYWVy7QL0zdJAdOWQ==
+  dependencies:
+    "@alifd/next" "~1.24.x"
+
+"@alifd/theme-24374@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.npmmirror.com/@alifd/theme-24374/-/theme-24374-0.2.1.tgz#0cc338af1392a911771abc74cf156a88b6ca0146"
+  integrity sha512-7jktfc4pjUqPRK/IK2sGQFJIa6RUZ01gpZiS2oScSmucwjWCylQVDmc0utJjeIwk0sia2JUV+jcCDqbiaKyphg==
+  dependencies:
+    "@alifd/next" "~1.27.x"
 
 "@alifd/validate@^1.2.0":
   version "1.4.0"
@@ -1962,6 +2025,11 @@ big.js@^6.2.0:
   version "6.2.1"
   resolved "https://registry.npmmirror.com/big.js/-/big.js-6.2.1.tgz#7205ce763efb17c2e41f26f121c420c6a7c2744f"
   integrity sha512-bCtHMwL9LeDIozFn+oNhhFoq+yQ3BNdnsLSASUxLciOb1vgvpHsIO1dsENiGMgbb4SkP5TrzWzRiLddn8ahVOQ==
+
+bignumber.js@^9.0.1:
+  version "9.1.2"
+  resolved "https://registry.npmmirror.com/bignumber.js/-/bignumber.js-9.1.2.tgz#b7c4242259c008903b13707983b5f4bbd31eda0c"
+  integrity sha512-2/mKyZH9K85bzOEfhXDBFZTGd1CTs+5IHpeFQo9luiBG7hghdC851Pj2WAhb6E3R6b9tZj/XKhbg4fum+Kepug==
 
 binary-extensions@^2.0.0:
   version "2.2.0"

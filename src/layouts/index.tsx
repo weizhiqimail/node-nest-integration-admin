@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Outlet } from 'umi';
 import { ConfigProvider } from '@alifd/next';
-import '@alifd/next/dist/next.css';
+import '@alifd/theme-24374/dist/next.css';
 
 import { getDevice } from '@/utils/common';
 
