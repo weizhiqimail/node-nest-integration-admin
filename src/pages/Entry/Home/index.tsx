@@ -2,54 +2,10 @@ import { history } from 'umi';
 import { Typography, List, Card } from '@alifd/next';
 
 import styles from './index.module.less';
-import { moduleEntryRoutes } from '@/pages/Entry/Home/config';
+import { CardList, CardItem } from '@/pages/Entry/Home/config';
 import { RouteItem } from '@/routes/types';
 
-interface CardItem {
-  title: string;
-  list: Array<RouteItem>;
-  jumpType: 1 | 2;
-}
-
 export default function HomePage() {
-  const cardList: Array<CardItem> = [
-    {
-      title: '主模块路由入口',
-      list: moduleEntryRoutes,
-      jumpType: 1,
-    },
-    {
-      title: '辅助文档地址',
-      list: [
-        {
-          name: 'umi 官网',
-          path: 'https://umijs.org/docs/guides/getting-started',
-        },
-        {
-          name: 'fusion 官网',
-          path: 'https://fusion.design/pc/doc/component/102?themeid=2',
-        },
-        {
-          name: 'nest 中文官网',
-          path: 'https://nest.nodejs.cn/',
-        },
-        {
-          name: 'swagger 接口文档',
-          path: 'http://localhost:4000/api-docs',
-        },
-        {
-          name: 'iconfont',
-          path: 'https://www.iconfont.cn/manage/index?manage_type=myprojects&projectId=4425329',
-        },
-        {
-          name: 'iconfont 阿里云',
-          path: 'https://www.iconfont.cn/collections/detail?cid=16472',
-        },
-      ],
-      jumpType: 2,
-    },
-  ];
-
   return (
     <div className={styles.pageWrapper}>
       <Typography.H1>
@@ -61,7 +17,7 @@ export default function HomePage() {
       </Typography.H2>
 
       <div className={styles.cardList}>
-        {cardList.map((cardItem: CardItem) => {
+        {CardList.map((cardItem: CardItem) => {
           return renderCardItem(cardItem);
         })}
       </div>
