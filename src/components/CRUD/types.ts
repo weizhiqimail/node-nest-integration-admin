@@ -15,12 +15,13 @@ export interface CRUDHeaderProps {
 export interface CRUDFormProps {
   itemList?: Array<ItemProps>;
   field?: Field;
+  loading?: boolean;
   showCreateBtn?: boolean;
   createBtnProps?: ButtonProps;
   createHandler?: (record: any) => void;
   showQueryBtn?: boolean;
-  showResetBtn?: boolean;
   queryBtnProps?: ButtonProps;
+  showResetBtn?: boolean;
   resetBtnProps?: ButtonProps;
 }
 

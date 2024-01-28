@@ -1,4 +1,5 @@
 import React from 'react';
+import { Loading } from '@alifd/next';
 
 import {
   CRUDFormProps,
@@ -19,13 +20,15 @@ export interface CRUDProps<RowItemType = any, UpdateItemType = any> {
 }
 
 function CRUD<T = Record<any, any>>(props: CRUDProps<T>) {
-  const { headerProps, formProps, tableProps } = props;
+  const { headerProps = {}, formProps = {}, tableProps = {} } = props;
 
   return (
     <div className={`${CRUD_BASE_CN}-wrapper`}>
-      <CRUDHeader {...headerProps}></CRUDHeader>
-      <CRUDForm {...formProps}></CRUDForm>
-      <CRUDTable {...tableProps}></CRUDTable>
+      <Loading style={{ width: '100%' }} visible={formProps.loading}>
+        <CRUDHeader {...headerProps}></CRUDHeader>
+        <CRUDForm {...formProps}></CRUDForm>
+        <CRUDTable {...tableProps}></CRUDTable>
+      </Loading>
     </div>
   );
 }

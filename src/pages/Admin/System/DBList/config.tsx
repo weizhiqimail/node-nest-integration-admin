@@ -38,24 +38,29 @@ export function generateDBTableColumn(): Array<ColumnProps> {
     {
       title: '字段类型',
       dataIndex: 'type',
+      width: 120,
     },
     {
       title: '字段长度',
       dataIndex: 'length',
+      width: 120,
     },
     {
       title: '是否主键',
       dataIndex: 'isPrimary',
       cell: (text: boolean) => (text ? '是' : '否'),
+      width: 120,
     },
     {
       title: '是否可空',
       dataIndex: 'isNullable',
       cell: (text: boolean) => (text ? '是' : '否'),
+      width: 120,
     },
     {
       title: '默认值',
       dataIndex: 'default',
+      width: 120,
     },
     {
       title: '备注',
